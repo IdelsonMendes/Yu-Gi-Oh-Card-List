@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #1f1f1f;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app nav h1 {
+  margin: auto 15px;
+}
+
+.app nav #search-card {
+  margin: auto 15px;
+  padding: 5px;
+  width: 200px;
+  height: 30px;
+  background: #2d2d2d;
+  border-radius: 7px;
+  border: none;
+  outline: 0;
+}
+
+hr {
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 0.1rem;
+  width: 100%;
+  height: 1px;
+  border: solid 1px #454545;
+}
+
+.app .cards-container {
+  margin: 1em 0em;
+  width: 90%;
+  height: auto;
+}
+
+.cards-container .cards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  list-style: none;
+  width: auto;
+  height: auto;
+}
+
+.cards-container .cards-list .card {
+  margin: 1em;
+  width: 12em;
+  height: 18em;
+  background: transparent;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+
+.cards-container .cards-list .card .card-image {
+  margin: 1em auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos do Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.modal img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal button {
+  margin-top: 8em;
+  margin-right: 43em;
+  padding: 0.6em 1.2em;
+  position: absolute;
+  top: 0em;
+  right: 0.6em;
+  background: #ff0000;
+  color: #fff;
+  border-radius: 0.4em;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1440px) {
+  .cards-container .cards-list {
+    margin: auto 10%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-container .cards-list {
+    margin: auto 10%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container .cards-list {
+    margin: auto 10%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container .cards-list {
+    margin: auto 20%;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 320px) {
+  .cards-container .cards-list {
+    margin: auto;
+    grid-template-columns: 1fr;
+  }
+}
